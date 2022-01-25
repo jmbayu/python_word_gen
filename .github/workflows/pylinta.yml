@@ -4,20 +4,20 @@ on: [push]
 
 jobs:
   build:
-    runs-on: [self-hosted, linux, x64]
-    strategy:
-      matrix:
-        python-version: ["3.8.12", "3.9.10", "3.10.2"]
+
+    runs-on: [self-hosted, linux, x86]
+
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v1
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: 3.8
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install pylint
     - name: Analysing the code with pylint
       run: |
+        find . -name '*.py' -exec pylint {} \;
         pylint $(git ls-files '*.py')
