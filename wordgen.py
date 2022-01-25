@@ -5,7 +5,7 @@ import enchant
 
 def main():
     '''
-    Use the spell checking dictionary with british english
+    Use enchant spell checking dictionary with british english
     '''
     use_dictionary = enchant.Dict("en_GB")
     tibi_olus_ipnut = "herecat"
