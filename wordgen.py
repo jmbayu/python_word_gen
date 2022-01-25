@@ -1,4 +1,4 @@
-# given the letters "herecat", generate at least many english words with 3+ letters
+# use all the letters in "herecat" to generate as many 3 lettered english words as possible
 from itertools import permutations
 import enchant
 # use the spell checking dictionary with british english 
@@ -15,4 +15,3 @@ for n in range(len(olu_input)):
       output_set.add(z)
 print( output_set )
 print(len(output_set))
-
