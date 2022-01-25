@@ -3,11 +3,11 @@ from itertools import permutations
 import enchant
 # use the spell checking dictionary with british english 
 dictionary = enchant.Dict("en_GB")
-olu_input = "herecat"
+olus_input = "herecat"
 minlen = 3
 
 output_set=set()
-letters=[x.lower() for x in olu_input]
+letters=[x.lower() for x in olus_input]
 for n in range(len(olu_input)):
   for y in list(permutations(letters, n)):
     z="".join(y)
