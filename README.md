@@ -1,6 +1,6 @@
 # python_word_gen
 
-given the letters "herecat", generate at least many english words with 3+ letters
+given the letters "h","e","r","e","c","a", "t", generate many english words with 3 or more letters
 
 # running
 
